@@ -1,49 +1,5 @@
 <style lang="scss" scoped>
-.tabbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 20px 60px;
 
-    .right {
-        display: flex;
-        gap: 60px;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    .list {
-        display: flex;
-        gap: 60px;
-
-        justify-content: center;
-
-        .item {}
-
-        .active {
-            color: #FF8D0D;
-        }
-    }
-
-    .purse {
-        background-color: #FF8D0D;
-        border-radius: 8px;
-        color: #fff;
-        height: 42px;
-        width: 124px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 6px;
-        }
-    }
-}
 
 .content {
     display: flex;
@@ -147,16 +103,56 @@
     }
 }
 
-.swipper{
+.swipper {
     padding-left: 24px;
 
-    &-item{
-        .top{
-            .avatar{
-                width: 48px;height: 48px;
+    &-item {
+        .top {
+            .avatar {
+                width: 48px;
+                height: 48px;
                 border-radius: 50%;
                 overflow: hidden;
-                img{
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .top-content {
+                display: flex;
+                justify-content: start;
+            }
+
+            .top-right {
+                display: flex;
+                justify-content: start;
+            }
+
+            .name {
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            .desc {
+                color: #4B5563;
+            }
+
+            .time {
+                display: flex;
+
+                img {
+                    width: 9px;
+                    // height: 24px;
+                }
+            }
+
+            .tick {
+                width: 20px;
+                height: 20px;
+
+                img {
                     width: 100%;
                     height: 100%;
                 }
@@ -168,29 +164,6 @@
 
 <template>
     <div class="wrapper">
-        <div class="tabbar">
-            <div class="logo">
-                EGGOR LOGO
-            </div>
-            <div class="right">
-                <div class="list">
-                    <div class="item active">
-                        探索
-                    </div>
-                    <div class="item">
-                        市场
-                    </div>
-                    <div class="item">
-                        排行榜
-                    </div>
-                </div>
-                <div class="purse">
-                    <img src="../assets/images/purse.png" alt="">
-                    连接钱包
-                </div>
-            </div>
-        </div>
-
         <div class="content">
             <div class="left">
                 <div class="textone">
@@ -249,10 +222,18 @@
                     <div class="avatar">
                         <img src="../assets/images/avatar.png" alt="">
                     </div>
-                    <div class="name">Sarah Chen</div>
-                    <div class="desc">@sarahchen</div>
-                    <div class="tick"><img src="../assets/images/tick.png" alt=""></div>
-                    <div class="time">· 2小时前</div>
+                    <div class="top-content">
+                        <div class="name">Sarah Chen</div>
+                        <div class="tick"><img src="../assets/images/tick.png" alt=""></div>
+
+                    </div>
+                    <div class="top-right">
+                        <div class="desc">@sarahchen </div>
+                        <div class="time">
+                            <img src="../assets/images/point.png" alt="">
+                            <div>2小时前</div>
+                        </div>
+                    </div>
                     <div class="right"><img src="../assets/images/bookmark.png" alt=""></div>
 
                 </div>
@@ -275,16 +256,16 @@
 
 <script lang="ts" setup>
 
-const numberlist=ref([
+const numberlist = ref([
     {
-        img:'../assets/images/like.png',
-        content:'1.2K'
-    },{
-        img:'../assets/images/comment.png',
-        content:'286'
-    },{
-        img:'../assets/images/share.png',
-        content:'分享' 
+        img: '../assets/images/like.png',
+        content: '1.2K'
+    }, {
+        img: '../assets/images/comment.png',
+        content: '286'
+    }, {
+        img: '../assets/images/share.png',
+        content: '分享'
     }
 ])
 </script>
