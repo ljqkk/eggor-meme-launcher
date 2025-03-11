@@ -20,7 +20,6 @@
     "@vue/tsconfig": "^0.7.0",
     "figlet": "^1.8.0",
     "fs-extra": "^11.3.0",
-    "less": "^4.2.2",
     "md5-node": "^1.0.1",
     "ora": "^8.2.0",
     "sass-embedded": "^1.85.1",
