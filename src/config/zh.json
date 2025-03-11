@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于我们",
+    "products": "产品中心",
+    "contact": "联系我们"
+  },
+  "user": {
+    "profile": {
+      "title": "个人资料",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "phone": "联系电话",
+      "address": "地址信息"
+    },
+    "settings": {
+      "title": "系统设置",
+      "theme": "主题设置",
+      "language": "语言选择",
+      "notification": "通知提醒"
+    }
+  },
+  "messages": {
+    "success": {
+      "save": "保存成功",
+      "update": "更新成功",
+      "delete": "删除成功"
+    },
+    "error": {
+      "network": "网络连接失败",
+      "permission": "权限不足",
+      "validation": "数据验证失败"
+    }
+  },
+  "products": {
+    "categories": {
+      "electronics": "电子产品",
+      "clothing": "服装服饰",
+      "food": "食品饮料"
+    },
+    "filters": {
+      "price": "价格区间",
+      "brand": "品牌筛选",
+      "rating": "用户评分"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "科技有限公司",
+      "address": "北京市朝阳区科技园",
+      "phone": "服务热线"
+    },
+    "links": {
+      "privacy": "隐私政策",
+      "terms": "使用条款",
+      "support": "技术支持"
+    }
+  }
+}

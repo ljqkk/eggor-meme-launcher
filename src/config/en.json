@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "home page",
+    "about": "About Us",
+    "products": "Product Center",
+    "contact": "Contact Us"
+  },
+  "user": {
+    "profile": {
+      "title": "personal data",
+      "name": "full name",
+      "email": "E-mail",
+      "phone": "Contact Number",
+      "address": "address information"
+    },
+    "settings": {
+      "title": "System settings",
+      "theme": "Theme Settings",
+      "language": "language selection",
+      "notification": "Notification reminder"
+    }
+  },
+  "messages": {
+    "success": {
+      "save": "Successfully saved",
+      "update": "update success",
+      "delete": "Delete successfully"
+    },
+    "error": {
+      "network": "Network connection failed",
+      "permission": "Insufficient permissions",
+      "validation": "Data validation failed"
+    }
+  },
+  "products": {
+    "categories": {
+      "electronics": "electronic product",
+      "clothing": "clothing",
+      "food": "food and beverage"
+    },
+    "filters": {
+      "price": "Price range",
+      "brand": "Brand screening",
+      "rating": "User Rating"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "Technology Co., Ltd",
+      "address": "Chaoyang District Science and Technology Park, Beijing",
+      "phone": "Service Hotline"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "terms of use",
+      "support": "technical support"
+    }
+  }
+}
