@@ -16,4 +16,4 @@ const handleClick = (val: string) => {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
