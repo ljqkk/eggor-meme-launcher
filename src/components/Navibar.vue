@@ -13,51 +13,51 @@
       </div>
     </div>
   </div>
-
 </template>
 <style lang="scss" scoped>
 .tabbar {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 60px;
+  .right {
     display: flex;
-    justify-content: space-between;
+    gap: 60px;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 20px 60px;
+  }
 
-    .right {
-        display: flex;
-        gap: 60px;
-        justify-content: center;
-        align-items: center;
+  .list {
+    display: flex;
+    gap: 60px;
+
+    justify-content: center;
+
+    .item {
     }
 
-    .list {
-        display: flex;
-        gap: 60px;
-
-        justify-content: center;
-
-        .item {}
-
-        .active {
-            color: #FF8D0D;
-        }
+    .active {
+      color: #ff8d0d;
     }
+  }
 
-    .purse {
-        background-color: #FF8D0D;
-        border-radius: 8px;
-        color: #fff;
-        height: 42px;
-        width: 124px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .purse {
+    background-color: #ff8d0d;
+    border-radius: 8px;
+    color: #fff;
+    height: 42px;
+    width: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        img {
-            width: 20px;
-            height: 20px;
-            margin-right: 6px;
-        }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
     }
+  }
 }
 </style>

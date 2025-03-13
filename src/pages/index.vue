@@ -97,110 +97,72 @@
   }
 }
 
-.swipper {
-  padding-left: 24px;
+.post {
+  display: flex;
+}
 
-  &-item {
-    width: 734px;
-    height: 633px;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
-    padding: 25px;
-    margin-top: 24px;
-    .top {
+.search {
+  margin-left: 24px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  .search-right {
+    display: flex;
+    gap: 10px;
+    .search-right-icon {
+      background-color: #f9fafb;
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
       display: flex;
-      justify-content: space-between;
-      .top-left {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 10px;
-      }
-      .avatar {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        overflow: hidden;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .top-content {
-        display: flex;
-        justify-content: start;
-      }
-
-      .top-right {
-        display: flex;
-        justify-content: start;
-      }
-      .right {
-        img {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      .name {
-        font-weight: bold;
-        font-size: 16px;
-      }
-
-      .desc {
-        color: #4b5563;
-      }
-
-      .time {
-        display: flex;
-        margin-left: 5px;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        img {
-          width: 9px;
-          // height: 24px;
-        }
-      }
-      .tick {
-        width: 20px;
-        height: 20px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .center {
-      .center-content {
-        margin: 18px 0;
-      }
-      .image {
-        width: 734px;
-        height: 490px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .bottom {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-      .bottom-item {
-        display: flex;
-        img {
-          width: 20px;
-          height: 20px;
-        }
-        .number {
-          margin-left: 5px;
-        }
-      }
+      justify-content: center;
+      align-items: center;
     }
   }
+
+  .search-left {
+    height: 48px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+    .search-left-search {
+      display: flex;
+      align-items: center;
+      background-color: #f9fafb;
+      width: 480px;
+      gap: 10px;
+      padding-left: 10px;
+      border-radius: 8px;
+      input {
+        outline: none;
+        border: none;
+      }
+    }
+    .search-left-center {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      background-color: #f9fafb;
+      border-radius: 8px;
+      color: #8b949e;
+      align-items: center;
+    }
+    .search-left-icon {
+      display: flex;
+      justify-content: center;
+      background-color: #f9fafb;
+      border-radius: 8px;
+      align-items: center;
+      padding: 0 13px;
+      color: #8b949e;
+    }
+  }
+}
+
+.bottom {
+  margin: 24px;
 }
 </style>
 
@@ -211,7 +173,7 @@
         <div class="textone">明星代币</div>
         <div class="texttwo">一币登天</div>
       </div>
-      <div class="right">明星注册</div>
+      <div class="right" @click="gotoApply">明星注册</div>
     </div>
 
     <div class="dynamic">
@@ -239,60 +201,80 @@
       </div>
     </div>
 
-    <div class="swipper">
-      <div class="swipper-item">
-        <div class="top">
-          <div class="top-left">
-            <div class="avatar">
-              <img src="../assets/images/avatar.png" alt="" />
-            </div>
-            <div class="item-desc">
-              <div class="top-content">
-                <div class="name">Sarah Chen</div>
-                <div class="tick">
-                  <img src="../assets/images/tick.png" alt="" />
-                </div>
-              </div>
-              <div class="top-right">
-                <div class="desc">@sarahchen</div>
-                <div class="time">
-                  <img src="../assets/images/point.png" alt="" />
-                  <div>2小时前</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="right">
-            <img src="../assets/images/bookmark.png" alt="" />
-          </div>
+    <div class="post">
+      <Swipper />
+      <Swipper />
+      <Swipper />
+    </div>
+
+    <div class="search">
+      <div class="search-left">
+        <div class="search-left-search">
+          <img
+            src="../assets/images/search.png"
+            width="20"
+            height="20"
+            alt=""
+          />
+          <input type="text" placeholder="Search Token" />
         </div>
-        <div class="center">
-          <div class="center-content">
-            很高兴能和大家分享我的新项目！这是我们团队努力的成果，希望得到大家的支持和建议。
-          </div>
-          <div class="image">
-            <img src="../assets/images/content.png" alt="" />
-          </div>
+
+        <div class="search-left-center">Listed on Radium</div>
+        <div class="search-left-icon">
+          All Tag
+          <img
+            src="../assets/images/pull_down.png"
+            width="16"
+            height="16"
+            alt=""
+          />
         </div>
-        <div class="bottom">
-          <div class="bottom-item">
-            <img src="../assets/images/like.png" alt="" />
-            <div class="number">1.2K</div>
-          </div>
-          <div class="bottom-item">
-            <div class="icon">
-              <img src="../assets/images/comment.png" alt="" />
-            </div>
-            <div class="number">{{ 286 }}</div>
-          </div>
-          <div class="bottom-item">
-            <img src="../assets/images/share.png" alt="" />
-            <div class="number">分享</div>
-          </div>
+        <div class="search-left-icon">
+          All Token
+          <img
+            src="../assets/images/pull_down.png"
+            width="16"
+            height="16"
+            alt=""
+          />
+        </div>
+        <div class="search-left-icon">
+          Creation Time
+          <img
+            src="../assets/images/pull_down.png"
+            width="16"
+            height="16"
+            alt=""
+          />
         </div>
       </div>
+      <div class="search-right">
+        <div class="search-right-icon">
+          <img src="../assets/images/list.png" width="20" height="20" alt="" />
+        </div>
+        <div class="search-right-icon">
+          <img
+            src="../assets/images/refresh.png"
+            width="20"
+            height="20"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="bottom-left"></div>
+      <div class="bottom-right"></div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const gotoApply = () => {
+  router.push('/apply'); // 添加路由跳转
+};
+</script>

@@ -13,5 +13,6 @@ declare module 'vue' {
     Navibar: typeof import('./components/Navibar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Swipper: typeof import('./components/Swipper.vue')['default']
   }
 }
